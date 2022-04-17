@@ -1,0 +1,69 @@
+#callback {
+  padding: 10px 0;
+}
+
+.callback {
+  &__title {
+
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+
+    padding: 55px 83px;
+    background-color: #ffffff;
+    box-shadow: $shadow__primary;
+
+    border-radius: $border-radius__primary;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      padding: 36px 58px;
+    }
+
+    @include breakpoint($breakpoint-mobile--large) {
+      padding: 20px 14px;
+
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+
+  &__form {
+    @include breakpoint($breakpoint-mobile--large) {
+      padding: 20px 14px;
+
+      background-color: #ffffff;
+      box-shadow: $shadow__primary;
+
+      border-radius: $border-radius__primary;
+    }
+  }
+
+  &__button {
+    width: 50%;
+  }
+
+  &__picture {
+    position: absolute;
+    top: 50%;
+    right: 0;
+
+    border-radius: $border-radius__primary;
+    overflow: hidden;
+
+    transform: translateY(-50%);
+
+    @include breakpoint($breakpoint-tablet--large) {
+      display: none;
+    }
+  }
+
+  &__image {
+    width: 755px;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      width: 550px;
+    }
+  }
+}

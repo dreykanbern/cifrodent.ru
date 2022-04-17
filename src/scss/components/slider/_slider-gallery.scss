@@ -1,0 +1,28 @@
+.slider-gallery {
+  .swiper-slide {
+    box-sizing: border-box;
+
+    padding-right: calc(var(--bs-gutter-x) / 2);
+    padding-left: calc(var(--bs-gutter-x) / 2);
+    margin-top: var(--bs-gutter-y);
+
+    width: 50%;
+
+    @include breakpoint($breakpoint-tablet--large) {
+      margin-bottom: 0 !important;
+      padding: 0;
+    }
+
+    @include first(2) {
+      width: 25%;
+    }
+
+    @include first(3) {
+      margin-bottom: 28px;
+    }
+
+    @include last(2) {
+      width: 25%;
+    }
+  }
+}

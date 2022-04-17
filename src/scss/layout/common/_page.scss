@@ -1,0 +1,72 @@
+.page {
+  color: $text-main;
+  background-color: $palette-main;
+
+  &__title {
+    font-size: $font-size__title;
+    font-weight: $weight-Medium;
+    line-height: 60px;
+
+    @include breakpoint($breakpoint-laptop--large) {
+      font-size: $font-size__subtitle;
+      line-height: 45px;
+    }
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      font-size: $font-size__text--large;
+      line-height: 30px;
+    }
+
+    @include breakpoint($breakpoint-mobile--large) {
+      font-size: $font-size__text--medium;
+      line-height: 23px;
+    }
+
+    &--mobile-big {
+      @include breakpoint($breakpoint-mobile--large) {
+        font-size: 28px;
+        line-height: 35px;
+      }
+    }
+
+    &--large {
+      font-size: 95px;
+
+      @include breakpoint($breakpoint-laptop--large) {
+        font-size: 71px;
+      }
+
+      @include breakpoint($breakpoint-laptop--medium) {
+        font-size: 58px;
+      }
+
+      @include breakpoint($breakpoint-tablet) {
+        font-size: 36px;
+      }
+    }
+  }
+
+  &__description {
+    font-size: $font-size__text--large;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+
+      @include breakpoint($breakpoint-laptop--medium) {
+        margin-bottom: 25px;
+      }
+    }
+
+    @include breakpoint($breakpoint-laptop--large) {
+      font-size: $font-size__text--big;
+    }
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      font-size: $font-size__text--default;
+    }
+
+    @include breakpoint($breakpoint-tablet) {
+      font-size: 14px;
+    }
+  }
+}

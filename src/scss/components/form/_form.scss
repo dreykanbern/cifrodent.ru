@@ -1,0 +1,83 @@
+.form {
+  &__action {
+    display: flex;
+    align-items: center;
+
+    &--center {
+      justify-content: center;
+      margin-right: -48px;
+
+      @include breakpoint($breakpoint-mobile--large) {
+        justify-content: flex-start;
+      }
+    }
+
+    &--sending {
+      .form__loader {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__button {
+    position: relative;
+  }
+
+  &__loader {
+    margin-left: 15px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.15s ease;
+  }
+
+  &__privacy {
+    text-align: center;
+    line-height: 125%;
+
+    br {
+      display: none;
+
+      @include breakpoint($breakpoint-mobile--large) {
+        display: block;
+      }
+    }
+
+    @include breakpoint($breakpoint-tablet) {
+      font-size: $font-size__text--small;
+    }
+
+    @include breakpoint($breakpoint-mobile--large) {
+      text-align: left;
+    }
+
+    a {
+      position: relative;
+      color: $text-white;
+
+      &:hover {
+        @media (hover: hover) {
+          &::after {
+            opacity: 0;
+          }
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+
+        display: block;
+        width: 100%;
+        height: 1px;
+
+        background-color: #ffffff;
+        transition: 0.15s ease;
+      }
+    }
+  }
+}

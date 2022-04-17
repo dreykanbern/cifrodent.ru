@@ -1,0 +1,65 @@
+.coworking-advantages {
+  border-radius: $border-radius__primary $border-radius__primary
+    $border-radius__secondary $border-radius__primary;
+
+  padding: 40px 50px 60px 50px;
+
+  background-color: $palette-block;
+  color: $text-white;
+
+  @include breakpoint($breakpoint-laptop--medium) {
+    padding: 30px 50px 40px 50px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 80%;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      width: 100%;
+    }
+
+    @include breakpoint($breakpoint-tablet) {
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  &__item {
+    width: 250px;
+
+    @include first(2) {
+      margin-bottom: 30px;
+
+      @include breakpoint($breakpoint-laptop--medium) {
+        margin-bottom: 40px;
+      }
+    }
+
+    &:nth-child(3) {
+      @include breakpoint($breakpoint-tablet) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: $font-size__text--large;
+    font-weight: $weight-Medium;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      font-size: $font-size__text--medium;
+    }
+  }
+
+  &__description {
+    font-size: $font-size__text--medium;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      font-size: $font-size__text--default;
+    }
+  }
+}

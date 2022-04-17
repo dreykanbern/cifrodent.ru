@@ -1,0 +1,116 @@
+// -----------------------------------------------------------------------------
+// Фрагмент стилизации какой-то секции
+// -----------------------------------------------------------------------------
+
+#hero {
+  padding-bottom: 10px;
+
+  @include background(
+    "../img/pages/main/hero/background.svg",
+    $position: calc(50% - 170px) 0,
+    $size: initial
+  );
+
+  @include breakpoint($breakpoint-laptop--large) {
+    background-size: 3350px;
+    background-position: calc(50% - 40px) 0;
+  }
+
+  @include breakpoint($breakpoint-laptop--medium) {
+    background-size: 1900px;
+    background-image: url("../img/pages/main/hero/background__v2.svg");
+    background-position: calc(50% - 240px) 0;
+  }
+
+  @include breakpoint($breakpoint-tablet--large) {
+    background-position: calc(50% - 180px) 0;
+  }
+
+  @include breakpoint($breakpoint-tablet) {
+    background-image: url("../img/pages/main/hero/background__v3.svg");
+    background-position: calc(50% - 60px) 0;
+    background-size: 500px;
+  }
+}
+
+.hero {
+  position: relative;
+
+  &__image {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 28%;
+
+    min-width: 420px;
+
+    transform: translateX(50%);
+    pointer-events: none;
+
+    @include breakpoint($breakpoint-laptop--large) {
+      top: 45px;
+      right: 22%;
+
+      width: 65%;
+    }
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      top: 55px;
+      right: 24%;
+
+      width: 75%;
+    }
+
+    @include breakpoint($breakpoint-tablet--large) {
+      top: 100px;
+      right: 10%;
+    }
+
+    @include breakpoint($breakpoint-tablet) {
+      right: 25%;
+
+      width: 120%;
+    }
+
+    @include breakpoint($breakpoint-mobile--large) {
+      top: 120px;
+      right: 23%;
+
+      width: 100%;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+
+    margin-top: 140px;
+    margin-bottom: 180px;
+
+    @include breakpoint($breakpoint-laptop--large) {
+      margin-top: 120px;
+      margin-bottom: 90px;
+    }
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      margin-top: 90px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 50px;
+
+    @include breakpoint($breakpoint-laptop--large) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__button {
+    position: relative;
+    z-index: 1;
+
+    @include breakpoint($breakpoint-tablet) {
+      margin: 0 auto;
+    }
+  }
+}

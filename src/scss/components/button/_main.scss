@@ -1,0 +1,16 @@
+// -----------------------------------------------------------------------------
+// В этом файле общие стили для компонента "Кнопка"
+// и подключение дополнительных вариаций
+// -----------------------------------------------------------------------------
+$button--hover: #a998eb;
+$button--active: #6150a7;
+
+$button-primary__bg: #8c77de;
+$button-secondary__bg: #f8f8f8;
+$button-outline__border: #8c77de;
+
+@import "button";
+@import "button-primary";
+@import "button-secondary";
+@import "button-outline";
+@import "button-loader";

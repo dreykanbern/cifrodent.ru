@@ -1,0 +1,51 @@
+#contribution {
+}
+
+.contribution {
+  &__item {
+    border-radius: $border-radius__primary;
+    overflow: hidden;
+
+    background-color: #ffffff;
+    box-shadow: $shadow__primary;
+  }
+
+  &__picture {
+    width: 100%;
+
+    @include breakpoint($breakpoint-tablet--large) {
+      height: 130px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 30px 0;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 20px;
+    font-weight: $weight-Regular;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      font-size: $font-size__text--default;
+    }
+  }
+
+  &__action {
+  }
+
+  &__button {
+  }
+}

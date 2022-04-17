@@ -1,0 +1,76 @@
+#information {
+  padding: 140px 0;
+  background-color: $palette-block;
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+
+  @include breakpoint($breakpoint-mobile--large) {
+    padding: 70px 0;
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+
+    margin-bottom: 75px;
+  }
+}
+
+.information {
+  color: $text-white;
+
+  &__title {
+    margin-bottom: 45px;
+    font-size: $font-size__subtitle;
+    font-weight: $weight-Medium;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      font-size: 28px;
+    }
+
+    @include breakpoint($breakpoint-tablet) {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text {
+    font-size: $font-size__text--large;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      font-size: $font-size__text--medium;
+    }
+
+    @include breakpoint($breakpoint-tablet) {
+      font-size: $font-size__text--small;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+
+    margin-top: 15px;
+  }
+
+  &__link {
+  }
+
+  &__icon {
+    path,
+    circle {
+      transition: 0.15s ease;
+    }
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      width: 64px;
+    }
+
+    &:hover {
+      @media (hover: hover) {
+        circle {
+          fill: #ffffff;
+        }
+
+        path {
+          fill: #8c77de;
+        }
+      }
+    }
+  }
+}

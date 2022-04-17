@@ -1,0 +1,65 @@
+// -----------------------------------------------------------------------------
+// В этом файле прописываются все стили относящиеся к шапке сайта
+// -----------------------------------------------------------------------------
+
+#header {
+  position: sticky;
+  z-index: $z-index-header;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  padding: 13px 0;
+  background-color: $palette-header;
+
+  box-shadow: 0 4px 4px rgba(39, 26, 90, 0.05);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+
+  &__nav {
+    margin-left: 40px;
+    margin-right: auto;
+
+    @include breakpoint($breakpoint-tablet--large) {
+      display: none;
+    }
+  }
+
+  &__action {
+    @include breakpoint($breakpoint-tablet--large) {
+      display: none;
+    }
+  }
+
+  &__phone {
+    margin-left: 80px;
+    font-size: 24px;
+    color: $text-purple;
+
+    @include breakpoint($breakpoint-laptop--large) {
+      margin-left: 30px;
+    }
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      margin-left: 20px;
+      font-size: $font-size__text--default;
+    }
+
+    @include breakpoint($breakpoint-tablet--large) {
+      display: none;
+    }
+  }
+
+  &__mobile {
+    display: none;
+    margin-left: auto;
+
+    @include breakpoint($breakpoint-tablet--large) {
+      display: block;
+    }
+  }
+}

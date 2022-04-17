@@ -1,0 +1,66 @@
+#vacancy {
+  padding-bottom: 245px;
+
+  @include background(
+    "../img/pages/vacancy/vacancy/background.svg",
+    $position: 50% calc(50% - 40px),
+    $size: initial
+  );
+
+  @include breakpoint($breakpoint-laptop--medium) {
+    background-position-y: calc(50% - 100px);
+    padding-bottom: 160px;
+  }
+
+  @include breakpoint($breakpoint-tablet) {
+    padding-top: 55px;
+    background-position-y: calc(50% - 150px);
+  }
+}
+
+.vacancy {
+  &__title {
+    margin-bottom: 25px;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__description {
+    font-size: $font-size__text--medium;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      font-size: $font-size__text--small;
+    }
+
+    @include breakpoint($breakpoint-tablet--large) {
+      br {
+        display: none;
+      }
+    }
+  }
+
+  &__picture {
+    border-radius: 0 0 $border-radius__primary $border-radius__secondary;
+
+    width: 100%;
+    height: 528px;
+
+    overflow: hidden;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      height: 330px;
+    }
+
+    @include breakpoint($breakpoint-tablet) {
+      display: none;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

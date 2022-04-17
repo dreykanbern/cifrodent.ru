@@ -1,0 +1,66 @@
+.hero-advantages {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+
+    width: 50%;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      width: 40%;
+    }
+
+    @include breakpoint($breakpoint-tablet) {
+      width: 100%;
+    }
+
+    &::before {
+      content: "";
+      flex-shrink: 0;
+
+      width: 12px;
+      height: 12px;
+
+      margin-top: 4px;
+      margin-right: 12px;
+
+      border: 2px solid #7769ae;
+      border-radius: 50%;
+    }
+
+    @include first(2) {
+      margin-bottom: 55px;
+
+      @include breakpoint($breakpoint-tablet) {
+        margin-bottom: 15px;
+      }
+    }
+
+    &:nth-child(2n + 1) {
+      @include breakpoint($breakpoint-laptop--medium) {
+        margin-right: 20px;
+      }
+
+      @include breakpoint($breakpoint-tablet) {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__text {
+    font-size: $font-size__text--medium;
+    line-height: 125%;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      font-size: $font-size__text--medium - 2;
+    }
+
+    @include breakpoint($breakpoint-mobile--large) {
+      font-size: $font-size__text--small;
+    }
+  }
+}

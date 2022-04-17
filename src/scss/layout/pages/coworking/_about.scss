@@ -1,0 +1,153 @@
+#about {
+  overflow: visible;
+
+  margin-bottom: -330px;
+
+  @include breakpoint($breakpoint-laptop--large) {
+    margin-bottom: -100px;
+  }
+
+  @include breakpoint($breakpoint-laptop--medium) {
+    margin-top: 60px;
+    margin-bottom: 0;
+  }
+}
+
+.about {
+  &__item {
+    position: relative;
+
+    .row {
+      align-items: center;
+    }
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      .row {
+        align-items: center !important;
+      }
+
+      br {
+        display: none;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 110px;
+      }
+
+      @include even() {
+        .row {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+
+    @include breakpoint($breakpoint-tablet--large) {
+      .row {
+        flex-direction: column-reverse !important;
+        align-items: flex-start !important;
+      }
+    }
+
+    &:nth-child(1) {
+      top: -350px;
+
+      .row {
+        align-items: flex-end;
+      }
+
+      .about__picture {
+        border-radius: $border-radius__primary $border-radius__secondary
+          $border-radius__primary $border-radius__primary;
+
+        height: 905px;
+      }
+
+      @include breakpoint($breakpoint-laptop--large) {
+        top: -150px;
+      }
+
+      @include breakpoint($breakpoint-laptop--medium) {
+        top: 0;
+      }
+    }
+
+    &:nth-child(2) {
+      top: -295px;
+
+      .about__picture {
+        border-radius: $border-radius__secondary $border-radius__primary
+          $border-radius__primary $border-radius__primary;
+
+        height: 675px;
+      }
+
+      @include breakpoint($breakpoint-laptop--large) {
+        top: -100px;
+      }
+
+      @include breakpoint($breakpoint-laptop--medium) {
+        top: 0;
+      }
+    }
+
+    &:nth-child(3) {
+      top: -295px;
+
+      .row {
+        flex-direction: row-reverse;
+        align-items: flex-end;
+      }
+
+      .about__picture {
+        border-radius: $border-radius__primary $border-radius__secondary
+          $border-radius__primary $border-radius__primary;
+
+        height: 460px;
+      }
+
+      @include breakpoint($breakpoint-laptop--large) {
+        top: -50px;
+      }
+
+      @include breakpoint($breakpoint-laptop--medium) {
+        top: 0;
+
+        .row {
+          flex-direction: initial;
+        }
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 22px;
+  }
+
+  &__picture {
+    width: 100%;
+    overflow: hidden;
+
+    @include breakpoint($breakpoint-laptop--large) {
+      height: 500px !important;
+    }
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      height: 400px !important;
+    }
+
+    @include breakpoint($breakpoint-tablet--large) {
+      margin-bottom: 12px;
+    }
+
+    @include breakpoint($breakpoint-tablet) {
+      height: 250px !important;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,115 @@
+// -----------------------------------------------------------------------------
+// В этом файле прописываются все стили относящиеся к подвалу сайта
+// -----------------------------------------------------------------------------
+
+#footer {
+  margin-top: 150px;
+  background-color: $palette-footer;
+
+  @include breakpoint($breakpoint-mobile--large) {
+    margin-top: 90px;
+  }
+}
+
+.footer {
+  padding: 40px 0 60px 0;
+
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include breakpoint($breakpoint-tablet) {
+      max-width: 130px;
+    }
+
+    .footer__link {
+      padding: 0;
+    }
+  }
+
+  &__icon {
+    @include breakpoint($breakpoint-laptop--medium) {
+      width: 32px;
+    }
+
+    path,
+    circle {
+      transition: 0.15s ease;
+    }
+
+    &:hover {
+      path {
+        fill: #8c77de;
+      }
+
+      circle {
+        stroke: #8c77de;
+      }
+    }
+  }
+
+  &__link {
+    padding: 8px 0;
+
+    font-size: $font-size__text--big;
+    transition: 0.15s ease;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      font-size: $font-size__text--small;
+    }
+
+    &:hover {
+      @media (hover: hover) {
+        color: $text-purple;
+      }
+    }
+
+    &--big {
+      font-weight: $weight-Bold;
+      font-size: $font-size__text--large;
+
+      @include breakpoint($breakpoint-laptop--medium) {
+        font-size: $font-size__text--medium;
+      }
+    }
+  }
+
+  &__copyright {
+    font-size: $font-size__text--small;
+    white-space: nowrap;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      font-size: 12px;
+      white-space: initial;
+    }
+
+    .footer__link {
+      font-size: $font-size__text--small;
+
+      @include breakpoint($breakpoint-laptop--medium) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__hide {
+    @include breakpoint($breakpoint-laptop--medium) {
+      display: none;
+    }
+  }
+
+  &__show {
+    display: none;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      display: block;
+    }
+  }
+}

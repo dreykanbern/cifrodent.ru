@@ -1,0 +1,92 @@
+#equipment-hero {
+  position: relative;
+  overflow: visible;
+  margin-bottom: 200px;
+
+  @include breakpoint($breakpoint-laptop--medium) {
+    margin-bottom: 180px;
+  }
+
+  @include breakpoint($breakpoint-tablet--large) {
+    margin-bottom: -60px;
+  }
+
+  @include breakpoint($breakpoint-tablet) {
+    margin-bottom: 0;
+  }
+}
+
+.equipment-hero {
+  position: relative;
+
+  h1 {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  &__wrapper {
+    position: relative;
+    z-index: 2;
+    top: -20px;
+
+    padding: 75px 0 100px 80px;
+
+    background-image: url("../img/pages/equipment/background.svg");
+    background-repeat: no-repeat;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      padding: 60px 0 110px 50px;
+      background-image: url("../img/pages/equipment/background__v2.svg");
+    }
+
+    @include breakpoint($breakpoint-tablet--large) {
+      top: -110px;
+      padding: 140px 40px 160px 75px;
+      font-size: $font-size__text--small;
+    }
+
+    @include breakpoint($breakpoint-tablet) {
+      top: 0;
+      padding: 32px 42px 84px 42px;
+
+      background-image: none;
+      background-color: #ffffff;
+      box-shadow: $shadow__primary;
+
+      border-radius: 0 0 $border-radius__secondary $border-radius__secondary;
+    }
+  }
+
+  &__text {
+    font-size: $font-size__text--large;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      font-size: $font-size__text--medium;
+    }
+
+    @include breakpoint($breakpoint-tablet--large) {
+      font-size: $font-size__text--small;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 0;
+
+    border-radius: 0 0 $border-radius__primary $border-radius__secondary;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      width: 720px;
+    }
+
+    @include breakpoint($breakpoint-tablet--large) {
+      width: 100%;
+    }
+
+    @include breakpoint($breakpoint-tablet) {
+      display: none;
+    }
+  }
+}

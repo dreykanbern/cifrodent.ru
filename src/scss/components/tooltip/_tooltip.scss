@@ -1,0 +1,17 @@
+.tippy-box[data-theme~="cifrodent"] {
+  z-index: 5;
+  padding: 0;
+
+  background-color: #ffffff;
+  color: $text-main;
+
+  box-shadow: $shadow__primary;
+
+  .tippy-content {
+    padding: 12px 18px;
+  }
+
+  .tippy-arrow {
+    color: #ffffff;
+  }
+}

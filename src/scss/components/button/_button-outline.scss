@@ -1,0 +1,11 @@
+.button-outline {
+  border: 1px solid $button-outline__border;
+
+  color: $text-purple;
+
+  &--white {
+    border: 1px solid #ffffff;
+
+    color: $text-white;
+  }
+}

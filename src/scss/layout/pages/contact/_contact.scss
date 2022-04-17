@@ -1,0 +1,125 @@
+#contact {
+  overflow: visible;
+}
+
+.contact {
+  &__map {
+    position: relative;
+    padding-bottom: 180px;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      padding-bottom: 85px;
+    }
+
+    @include breakpoint($breakpoint-tablet--large) {
+      display: flex;
+      flex-direction: column-reverse;
+      padding-bottom: 0;
+    }
+  }
+
+  &__info {
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+
+    width: 540px;
+
+    padding: 80px 40px 40px 40px;
+
+    border-radius: $border-radius__secondary $border-radius__primary
+      $border-radius__primary $border-radius__primary;
+
+    background-color: #ffffff;
+    box-shadow: $shadow__primary;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      width: 450px;
+      padding: 80px 40px 25px 40px;
+    }
+
+    @include breakpoint($breakpoint-tablet--large) {
+      position: static;
+      width: 100%;
+      margin-top: 40px;
+      border-radius: $border-radius__primary;
+    }
+
+    @include breakpoint($breakpoint-mobile--large) {
+      padding: 60px 25px 25px 25px;
+    }
+  }
+
+  &__block {
+  }
+
+  &__title {
+    margin-bottom: 5px;
+    font-size: $font-size__text--large;
+    font-weight: $weight-Light;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      font-size: $font-size__text--medium;
+    }
+
+    @include breakpoint($breakpoint-mobile--large) {
+      font-size: 14px;
+    }
+  }
+
+  &__link,
+  &__text {
+    font-size: $font-size__text--large;
+    line-height: 36px;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      font-size: $font-size__text--medium;
+      line-height: 24px;
+    }
+
+    @include breakpoint($breakpoint-mobile--large) {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  &__link {
+    transition: 0.15s ease;
+
+    &:hover {
+      @media (hover: hover) {
+        color: $text-purple;
+      }
+    }
+  }
+
+  &__text {
+  }
+
+  &__social {
+  }
+
+  &__icon {
+    path,
+    circle {
+      transition: 0.15s ease;
+    }
+
+    @include breakpoint($breakpoint-tablet) {
+      width: 64px;
+    }
+
+    &:hover {
+      @media (hover: hover) {
+        circle {
+          fill: #8c77de;
+        }
+
+        path {
+          fill: #ffffff;
+        }
+      }
+    }
+  }
+}

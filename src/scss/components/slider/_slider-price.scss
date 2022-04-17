@@ -1,0 +1,59 @@
+.slider-price-pagination {
+  position: initial;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  @include breakpoint($breakpoint-tablet--large) {
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow: auto;
+  }
+
+  .swiper-pagination-bullet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    border: 2px solid transparent;
+    border-radius: $border-radius__primary;
+    outline: none;
+
+    padding: 28px 15px;
+
+    background-color: #ededed;
+
+    font-weight: $weight-Bold;
+
+    opacity: 1;
+    cursor: pointer;
+    transition: 0.15s ease;
+
+    @include breakpoint($breakpoint-tablet--large) {
+      white-space: nowrap;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+
+      @include breakpoint($breakpoint-tablet--large) {
+        margin-right: 15px;
+      }
+    }
+
+    &:hover {
+      @media (hover: hover) {
+        border-color: $palette-block;
+      }
+    }
+
+    &-active {
+      color: $text-white;
+      background-color: $palette-block;
+    }
+  }
+}

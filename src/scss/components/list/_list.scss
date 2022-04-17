@@ -1,0 +1,35 @@
+.list {
+  margin-left: 20px;
+  list-style-type: disc;
+  line-height: 150%;
+
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
+
+  &--description {
+    line-height: 150%;
+    margin-left: 0;
+
+    font-size: $font-size__text--large;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      font-size: $font-size__text--default;
+    }
+
+    .list__item::before {
+      content: "- ";
+    }
+  }
+
+  &__title {
+    font-weight: $weight-Bold;
+  }
+
+  &__item {
+    &::marker {
+      color: #7769ae;
+      font-size: 25px;
+    }
+  }
+}

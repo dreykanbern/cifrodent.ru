@@ -1,0 +1,80 @@
+.advantages {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding: 95px 85px;
+
+  border-radius: $border-radius__secondary $border-radius__primary
+    $border-radius__secondary $border-radius__primary;
+
+  background-color: #ffffff;
+  box-shadow: $shadow__primary;
+
+  @include breakpoint($breakpoint-laptop--medium) {
+    padding: 60px 40px;
+
+    border-radius: $border-radius__mobile $border-radius__primary
+      $border-radius__mobile $border-radius__primary;
+  }
+
+  @include breakpoint($breakpoint-tablet--large) {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    padding: 35px 45px;
+  }
+
+  @include breakpoint($breakpoint-mobile--large) {
+    padding: 25px 20px;
+  }
+
+  &__item {
+    text-align: center;
+
+    &:last-child {
+      @include breakpoint($breakpoint-tablet) {
+        width: 100%;
+      }
+    }
+
+    @include breakpoint($breakpoint-tablet--large) {
+      width: 33%;
+
+      @include first(3) {
+        margin-bottom: 35px;
+      }
+    }
+
+    @include breakpoint($breakpoint-tablet) {
+      width: 50%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 18px;
+    color: $text-purple;
+    font-size: $font-size__subtitle;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      margin-bottom: 10px;
+
+      font-size: $font-size__text--big;
+    }
+  }
+
+  &__text {
+    color: $text-secondary;
+    font-size: $font-size__text--large;
+    line-height: 125%;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      font-size: initial;
+    }
+
+    @include breakpoint($breakpoint-mobile--large) {
+      font-size: $font-size__text--small;
+    }
+  }
+}

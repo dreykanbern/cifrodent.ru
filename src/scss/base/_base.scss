@@ -1,0 +1,102 @@
+// -----------------------------------------------------------------------------
+// В этом файле находятся все базовые стили
+// -----------------------------------------------------------------------------
+
+/**
+ * Настройка бокс-модели для страницы
+ */
+
+html {
+  box-sizing: border-box;
+}
+
+/**
+ * Наследуем всем элементам свойство border-box от родителя (html)
+ * Так как селектор * имеет 0 приоритет, он не переопределяет стили html
+ * Это нужно, чтобы в будушем была возможность без проблем переопредилить стили
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * Удаляет отступы снизу у элементов, внутри контейнера
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Разрешить растягивать текстовое поле только по вертикали
+ */
+
+section {
+  overflow: hidden;
+}
+
+textarea {
+  resize: vertical;
+}
+
+a {
+  text-decoration: none;
+  color: $text-main;
+}
+
+p {
+  line-height: 150%;
+  margin: 0;
+}
+
+dt,
+dd,
+dl,
+ol,
+ul {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ol {
+  padding-left: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+picture {
+  display: block;
+}

@@ -1,0 +1,58 @@
+.slider-team {
+  .swiper-wrapper {
+    align-items: flex-end;
+  }
+}
+
+#team {
+  @include breakpoint($breakpoint-laptop--large) {
+    .swiper-controls {
+      margin-top: 0;
+
+      div {
+        position: absolute;
+      }
+    }
+
+    .swiper {
+      &-button-prev,
+      &-button-next {
+        top: 45%;
+      }
+
+      &-button-prev {
+        left: -15px;
+
+        &::after {
+          content: url("../img/icons/control/slider-arrow__left--white.svg");
+        }
+      }
+
+      &-button-next {
+        right: -15px;
+
+        &::after {
+          content: url("../img/icons/control/slider-arrow__right--white.svg");
+        }
+      }
+    }
+  }
+
+  @include breakpoint($breakpoint-laptop--medium) {
+    .swiper-controls {
+      div {
+        top: 43%;
+      }
+    }
+
+    .swiper {
+      &-button-prev {
+        left: -30px;
+      }
+
+      &-button-next {
+        right: -30px;
+      }
+    }
+  }
+}

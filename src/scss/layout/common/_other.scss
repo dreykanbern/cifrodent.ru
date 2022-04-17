@@ -1,0 +1,7 @@
+.logo {
+  width: 100%;
+
+  @include breakpoint($breakpoint-laptop--medium) {
+    max-width: 160px;
+  }
+}

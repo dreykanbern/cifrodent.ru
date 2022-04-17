@@ -1,0 +1,166 @@
+#dental {
+  padding-bottom: 10px;
+
+  @include background(
+    "../img/pages/main/dental/background.svg",
+    $position: calc(50% - 940px) calc(50% + 100px),
+    $size: unset
+  );
+
+  @include breakpoint($breakpoint-laptop--medium) {
+    background-position-y: 70%;
+    background-position-x: calc(50% - 640px);
+    background-size: 1500px;
+  }
+
+  @include breakpoint($breakpoint-tablet--large) {
+    background-image: url("../img/pages/main/dental/background_v2.svg");
+    background-size: initial;
+    background-position: calc(50% - 240px) calc(50% + 360px);
+  }
+
+  @include breakpoint($breakpoint-tablet) {
+    background-position: calc(50% - 140px) calc(50% + 360px);
+  }
+
+  @include breakpoint($breakpoint-mobile--large) {
+    background-position: calc(50% - 140px) calc(50% + 280px);
+  }
+}
+
+.dental {
+  &__heading {
+    &--mt {
+      margin-top: 85px;
+    }
+
+    &--inverted {
+      color: $text-white;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    height: 300px;
+
+    overflow: hidden;
+
+    background-color: #fff;
+    box-shadow: $shadow__primary;
+
+    transition: 0.15s ease;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      height: 190px;
+    }
+
+    @include breakpoint($breakpoint-mobile--large) {
+      height: 138px;
+    }
+
+    &:hover {
+      @media (hover: hover) {
+        .dental__icon {
+          transform: translateX(10px);
+        }
+      }
+    }
+
+    &--border-left {
+      border-radius: $border-radius__secondary $border-radius__primary
+        $border-radius__primary $border-radius__primary;
+
+      @include breakpoint($breakpoint-laptop--medium) {
+        border-radius: $border-radius__mobile $border-radius__primary
+          $border-radius__primary $border-radius__primary;
+      }
+    }
+
+    &--border-right {
+      border-radius: $border-radius__primary $border-radius__secondary
+        $border-radius__primary $border-radius__primary;
+
+      @include breakpoint($breakpoint-laptop--medium) {
+        border-radius: $border-radius__primary $border-radius__mobile
+          $border-radius__primary $border-radius__primary;
+      }
+    }
+  }
+
+  &__content {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+
+    font-weight: $weight-Regular;
+    font-size: $font-size__subtitle;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      font-size: $font-size__text--big;
+    }
+
+    @include breakpoint($breakpoint-mobile--large) {
+      font-size: initial;
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  &__action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__link {
+    margin-right: 5px;
+
+    color: $text-purple;
+    font-size: $font-size__text--medium;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      font-size: $font-size__text--small - 2;
+    }
+  }
+
+  &__icon {
+    margin-top: 4px;
+    transition: 0.15s ease;
+  }
+
+  &__picture {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+
+    &--left {
+      border-bottom-right-radius: 840px;
+    }
+
+    &--right {
+      border-bottom-left-radius: 840px;
+      margin-left: auto;
+    }
+
+    &--mobile-border {
+      @include breakpoint($breakpoint-mobile--large) {
+        border-bottom-left-radius: 840px;
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+}

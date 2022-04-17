@@ -1,0 +1,54 @@
+// -----------------------------------------------------------------------------
+// Соединяем все фрагменты разметки в один файл
+// -----------------------------------------------------------------------------
+
+// Общие фрагметы, которые встречаются на всех страницах
+@import "common/page";
+@import "common/header";
+@import "common/nav";
+@import "common/footer";
+@import "common/other";
+@import "common/mobile-menu";
+
+// Готовые блоки для страниц
+@import "pages/advantages.scss";
+@import "pages/gallery.scss";
+@import "pages/cifrodent.scss";
+@import "pages/workshop.scss";
+@import "pages/price.scss";
+@import "pages/partnership.scss";
+@import "pages/partnership-item.scss";
+@import "pages/map.scss";
+@import "pages/equipment.scss";
+@import "pages/information.scss";
+
+// Фрагметы главной страницы
+@import "pages/main/hero/main.scss";
+@import "pages/main/dental.scss";
+@import "pages/main/automatic.scss";
+@import "pages/main/join.scss";
+@import "pages/main/callback.scss";
+
+@import "pages/coworking/coworking/main";
+@import "pages/coworking/about";
+
+@import "pages/cifrodent/cifrodent-hero";
+@import "pages/cifrodent/team";
+@import "pages/cifrodent/certificates";
+
+@import "pages/vacancy/vacancy";
+@import "pages/vacancy/job";
+
+@import "pages/equipment/equipment-hero";
+
+@import "pages/team/staff";
+
+@import "pages/404/not-found";
+
+@import "pages/thank/thank";
+
+@import "pages/document/document";
+
+@import "pages/parnership/contribution";
+
+@import "pages/contact/contact";

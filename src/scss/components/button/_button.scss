@@ -1,0 +1,72 @@
+.button {
+  outline: none;
+  border: none;
+  border-radius: $border-radius__primary;
+
+  background-color: transparent;
+
+  padding: 17px 55px;
+
+  font-size: $font-size__text--medium;
+  font-weight: $weight-Regular;
+
+  cursor: pointer;
+  transition: all 0.15s ease;
+
+  white-space: nowrap;
+
+  @include breakpoint($breakpoint-laptop--medium) {
+    padding: 17px 27px;
+    font-size: $font-size__text--small;
+  }
+
+  &--icon {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    margin-left: 10px;
+
+    path {
+      transition: 0.15s ease;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: wait;
+  }
+
+  &:hover:enabled {
+    @media (hover: hover) {
+      background: $button--hover;
+      border-color: $button--hover;
+      color: $text-white;
+
+      path {
+        fill: #ffffff;
+      }
+    }
+  }
+
+  &:active:enabled {
+    background: $button--active;
+  }
+
+  &--small {
+    padding: 11px 46px;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      padding: 9px 25px;
+    }
+  }
+
+  &--tiny {
+    padding: 11px 33px;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      padding: 9px 18px;
+    }
+  }
+}

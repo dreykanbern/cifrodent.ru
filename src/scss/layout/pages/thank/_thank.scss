@@ -1,0 +1,81 @@
+#thank {
+  @include background(
+    "../img/pages/thank/background.svg",
+    $position: center center
+  );
+
+  @include breakpoint($breakpoint-laptop--medium) {
+    margin-bottom: -100px;
+  }
+}
+
+.thank {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding-top: 100px;
+
+  color: $text-white;
+
+  text-align: center;
+
+  &__icon {
+    margin-bottom: 30px;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      width: 64px;
+    }
+
+    @include breakpoint($breakpoint-tablet) {
+      width: 50px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      margin-bottom: 20px;
+
+      font-size: 36px;
+      line-height: 41px;
+    }
+
+    @include breakpoint($breakpoint-tablet) {
+      margin-bottom: 12px;
+
+      font-size: 20px;
+      line-height: 22px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 100px;
+    font-weight: $weight-Regular;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      margin-bottom: 45px;
+      font-size: 18px;
+    }
+  }
+
+  &__wrapper {
+    padding-bottom: 200px;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      padding-bottom: 150px;
+    }
+
+    @include breakpoint($breakpoint-tablet) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__button {
+    border-color: $text-white;
+    color: $text-white;
+  }
+}

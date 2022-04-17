@@ -1,0 +1,144 @@
+#price {
+  padding-bottom: 15px;
+
+  @include breakpoint($breakpoint-tablet) {
+    margin-top: 40px;
+  }
+
+  .swiper-container {
+    margin: -15px;
+
+    @include breakpoint($breakpoint-tablet--large) {
+      margin: 0 -15px;
+    }
+  }
+}
+
+.price {
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    max-height: 630px;
+    overflow: auto;
+
+    padding: 15px;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      max-height: 620px;
+    }
+
+    @include breakpoint($breakpoint-tablet--large) {
+      max-height: 450px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    width: calc(50% - 10px);
+
+    margin-right: auto;
+
+    border-radius: $border-radius__primary;
+    overflow: hidden;
+
+    background-color: #ffffff;
+
+    box-shadow: $shadow__primary;
+
+    @include breakpoint($breakpoint-tablet) {
+      width: 100%;
+    }
+
+    @include even {
+      margin-left: 20px;
+
+      @include breakpoint($breakpoint-tablet) {
+        margin-left: 0;
+      }
+    }
+
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 35px 20px 20px;
+  }
+
+  &__name {
+    margin-bottom: 12px;
+    font-size: $font-size__text--medium;
+    font-weight: $weight-Medium;
+
+    line-height: 23px;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      font-size: $font-size__text--default;
+      line-height: 20px;
+    }
+  }
+
+  &__info {
+    color: $text-secondary;
+  }
+
+  &__info:not(:last-child) {
+    margin-bottom: 5px;
+  }
+
+  &__value {
+    margin-top: auto;
+    padding-top: 12px;
+
+    font-size: 22px;
+    font-weight: $weight-Regular;
+
+    &::after {
+      content: " руб.";
+    }
+  }
+
+  &__action {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__picture {
+    flex-shrink: 0;
+
+    width: 200px;
+    height: 100%;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      display: none;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__button {
+    &--laptop {
+      @include breakpoint($breakpoint-tablet--large) {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      display: none;
+
+      @include breakpoint($breakpoint-tablet--large) {
+        display: flex;
+        margin-top: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+#partnership {
+  @include breakpoint($breakpoint-mobile--large) {
+    margin-top: 90px;
+  }
+}
+
+.partnership {
+  &__title br {
+    display: none;
+
+    @include breakpoint($breakpoint-mobile--large) {
+      display: block;
+    }
+  }
+
+  &__col {
+    &:first-child {
+      .partnership-item__photo {
+        border-top-left-radius: $border-radius__secondary;
+      }
+    }
+
+    &:last-child {
+      .partnership-item__photo {
+        border-top-right-radius: $border-radius__secondary;
+      }
+    }
+  }
+
+  &__action {
+  }
+}

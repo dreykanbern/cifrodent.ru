@@ -1,0 +1,23 @@
+#certificates {
+
+}
+
+.certificates {
+  position: relative;
+
+  &__picture {
+    width: 100%;
+    height: 450px;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      height: 390px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+  }
+}

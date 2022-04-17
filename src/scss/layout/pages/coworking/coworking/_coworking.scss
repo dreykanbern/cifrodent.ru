@@ -1,0 +1,86 @@
+#coworking {
+  padding-top: 70px;
+  padding-bottom: 50px;
+
+  @include background(
+    "../img/pages/coworking/coworking/background.svg",
+    $position: calc(50% - 370px) -20px,
+    $size: initial
+  );
+
+  @include breakpoint($breakpoint-laptop--medium) {
+    background-position: calc(50% - 270px) calc(50% - 100px);
+  }
+
+  @include breakpoint($breakpoint-tablet--large) {
+    background-position: calc(50% - 50px) calc(50% - 350px);
+  }
+
+  @include breakpoint($breakpoint-tablet) {
+    background-position: calc(50% - 50px) calc(50% - 450px);
+  }
+
+  @include breakpoint($breakpoint-mobile--large) {
+    padding-top: 30px;
+
+    background-image: url("../img/pages/coworking/coworking/background__v2.svg");
+    background-position: calc(50% - 80px) calc(0% - 15px);
+  }
+}
+
+.coworking {
+  &__title {
+    margin-bottom: 22px;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      font-size: 28px;
+    }
+
+    @include breakpoint($breakpoint-tablet--large) {
+      text-align: center;
+    }
+
+    @include breakpoint($breakpoint-tablet) {
+      font-size: $font-size__text--medium;
+    }
+  }
+
+  &__description {
+    margin-bottom: 22px;
+
+    @include breakpoint($breakpoint-tablet--large) {
+      text-align: center;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: flex-start;
+
+    @include breakpoint($breakpoint-tablet--large) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__button {
+    margin-right: 85px;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      margin-right: 45px;
+    }
+
+    @include breakpoint($breakpoint-tablet--large) {
+      margin-right: 0;
+      margin-bottom: 65px;
+    }
+  }
+
+  &__advantages {
+    position: relative;
+    z-index: 5;
+
+    flex-grow: 1;
+    max-width: 740px;
+  }
+}
