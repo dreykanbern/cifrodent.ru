@@ -2,7 +2,7 @@
   "name": "cifrodent.ru",
   "version": "1.0.0",
   "main": "src/index.html",
-  "repository": "https://github.com/dreykanbern/cifrodent.ru-SPA",
+  "repository": "https://github.com/dreykanbern/cifrodent.ru",
   "author": "dreykanbern",
   "license": "MIT",
   "devDependencies": {
